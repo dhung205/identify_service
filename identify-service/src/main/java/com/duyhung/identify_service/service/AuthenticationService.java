@@ -165,6 +165,13 @@ public class AuthenticationService {
         return signedJWT;
     }
 
+    public AuthenticationResponse authenticateOAuthUser(User user) {
+        return AuthenticationResponse.builder()
+                .token(generateToken(user))
+                .authenticated(true)
+                .build();
+    }
+
     private String generateToken(User user) {
         JWSHeader header = new JWSHeader(JWSAlgorithm.HS512);
         JWTClaimsSet jwtClaimsSet = new JWTClaimsSet.Builder()

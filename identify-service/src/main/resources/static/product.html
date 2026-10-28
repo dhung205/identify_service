@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chi tiết sản phẩm | Nhà thuốc Long Châu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css?v=24" />
+    <link rel="stylesheet" href="assets/css/refresh.css?v=25" />
+  </head>
+  <body class="product-detail-page">
+    <header class="site-header">
+      <div class="topline">
+        <span><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><line x1="10" y1="18.3" x2="14" y2="18.3"/></svg> Tải ứng dụng</span
+        ><span><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3.5h3.4l1.6 4.4-2.2 1.8a13 13 0 0 0 6 6l1.8-2.2 4.4 1.6v3.4c0 1-.9 1.8-1.9 1.7C9.9 19.6 4.4 14.1 3.8 6.4c-.1-1 .7-1.9 1.7-1.9Z"/></svg> Tư vấn miễn phí: <b>1800 6928</b></span>
+      </div>
+      <div class="header-main wrap">
+        <a class="brand" href="index.html" aria-label="Nhà thuốc Long Châu"
+          ><span class="brand-mark"><svg class="icon-svg filled" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V9h5.5a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H14.5v5.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h5.5V3.5a1 1 0 0 1 1-1Z"/></svg></span
+          ><span>NHÀ THUỐC<strong>LONG CHÂU</strong></span></a
+        >
+        <label class="search"
+          ><span><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span
+          ><input
+            id="searchInput"
+            placeholder="Tìm thuốc, vitamin, thực phẩm bảo vệ sức khỏe..."
+            readonly
+            onclick="location.href='index.html'"
+        /></label>
+        <div class="account-menu" id="accountMenu">
+          <a class="account" id="accountLink" href="staff/login.html"
+            ><span><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><b id="accountLabel">Đăng nhập</b><i class="account-caret"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></i></a
+          >
+          <div class="account-dropdown" id="accountDropdown" hidden>
+            <button type="button" data-nav="personal"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 19c1-2.5 3.2-4 5.5-4s4.5 1.5 5.5 4"/></svg> <span>Thông tin cá nhân</span></button>
+            <button type="button" data-nav="orders"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3.5h6a1 1 0 0 1 1 1V6H8V4.5a1 1 0 0 1 1-1Z"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="14" y2="15"/></svg> <span>Đơn hàng của tôi</span></button>
+            <button type="button" data-nav="address"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg> <span>Sổ địa chỉ nhận hàng</span></button>
+            <button type="button" data-nav="consult"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H8l-4 4V6a1 1 0 0 1 1-1Z"/></svg> <span>Tin nhắn tư vấn</span></button>
+            <button type="button" class="logout" id="headerLogout"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> <span>Đăng xuất</span></button>
+          </div>
+        </div>
+        <button class="cart" id="cartButton" aria-label="Giỏ hàng">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/></svg> <span>Giỏ hàng</span><i id="cartCount">0</i>
+        </button>
+      </div>
+    </header>
+
+    <main class="wrap detail-main" id="top">
+  <nav class="detail-breadcrumb" aria-label="Đường dẫn"><a href="index.html">Trang chủ</a><span>/</span><a href="index.html#products">Sản phẩm</a><span>/</span><span id="detailCrumb">Chi tiết sản phẩm</span></nav>
+  <div id="detailLoading" class="detail-state" role="status">Đang tải thông tin sản phẩm…</div>
+  <section id="detailError" class="detail-state" hidden><h1>Chưa thể hiển thị sản phẩm</h1><p id="detailErrorText"></p><button id="detailRetry" type="button">Thử lại</button><a href="index.html#products">Quay lại danh sách</a></section>
+  <article id="detailProduct" hidden>
+    <div class="detail-top">
+      <div class="detail-gallery"><div class="detail-image-box"><img id="detailImage" alt="" hidden><div id="detailNoImage">Chưa có ảnh sản phẩm</div></div><p>Hình ảnh sản phẩm do nhà thuốc cung cấp</p></div>
+      <div class="detail-info"><p class="detail-brand" id="detailBrand"></p><h1 id="detailName"></h1><p class="detail-code" id="detailCode"></p>
+        <p class="detail-price"><strong id="detailPrice"></strong><span id="detailPriceUnit"></span></p>
+        <div class="detail-option"><span>Đơn vị tính</span><strong id="detailUnit" class="detail-unit"></strong></div>
+        <div class="detail-option"><label for="detailQuantity">Chọn số lượng</label><div class="detail-quantity"><button id="detailMinus" type="button" aria-label="Giảm số lượng">−</button><input id="detailQuantity" type="number" inputmode="numeric" min="1" value="1" step="1"><button id="detailPlus" type="button" aria-label="Tăng số lượng">+</button></div></div>
+        <p id="detailStock" class="detail-stock"></p>
+        <div class="detail-actions"><button type="button" id="detailBuy">Chọn mua</button><a href="cart.html?v=44">Xem giỏ hàng</a><button type="button" id="detailConsult" class="detail-consult-open">Tư vấn ngay</button></div>
+        <form id="detailConsultForm" class="detail-consult-form" hidden>
+          <label for="detailConsultQuestion">Câu hỏi của bạn</label>
+          <textarea id="detailConsultQuestion" placeholder="Ví dụ: Tôi đang đau nửa đầu, sản phẩm này dùng thế nào cho phù hợp?"></textarea>
+          <button type="submit">Gửi tư vấn</button>
+        </form>
+        <p id="detailFeedback" class="detail-feedback" role="status" aria-live="polite"></p>
+        <p id="detailDescription" class="detail-description"></p>
+        <dl id="detailFacts" class="detail-facts"></dl>
+      </div>
+    </div>
+    <section class="detail-extra"><h2>Thông tin sản phẩm</h2><div class="detail-extra-grid"><section><h3>Thành phần</h3><p id="detailIngredient"></p></section><section><h3>Cách dùng</h3><p id="detailDosage"></p></section></div></section>
+  </article>
+</main>
+    <footer id="stores">
+      <div class="wrap footer-grid">
+        <div class="footer-col footer-about">
+          <div class="brand footer-brand">
+            <span class="brand-mark"><svg class="icon-svg filled" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V9h5.5a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H14.5v5.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h5.5V3.5a1 1 0 0 1 1-1Z"/></svg></span
+            ><span>NHÀ THUỐC<strong>LONG CHÂU</strong></span>
+          </div>
+          <p>Hệ thống nhà thuốc bán lẻ chính hãng, tư vấn dược sĩ tận tâm, giao hàng nhanh toàn quốc.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Về chúng tôi</h4>
+          <ul>
+            <li><a href="index.html#advice">Chính sách đổi trả</a></li>
+            <li><a href="index.html#advice">Chính sách bảo mật</a></li>
+            <li><a href="index.html#advice">Tuyển dụng</a></li>
+            <li><a href="index.html#advice">Tư vấn dược sĩ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li>Hướng dẫn mua hàng</li>
+            <li>Hướng dẫn thanh toán</li>
+            <li>Chính sách giao hàng</li>
+            <li>Câu hỏi thường gặp</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Liên hệ</h4>
+          <ul class="footer-contact">
+            <li><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3.5h3.4l1.6 4.4-2.2 1.8a13 13 0 0 0 6 6l1.8-2.2 4.4 1.6v3.4c0 1-.9 1.8-1.9 1.7C9.9 19.6 4.4 14.1 3.8 6.4c-.1-1 .7-1.9 1.7-1.9Z"/></svg> 1800 6928</li>
+            <li><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg> cskh@longchau.com</li>
+            <li><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg> 46 Triều Khúc, Thanh Xuân, Hà Nội</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Nhà Thuốc Long Châu · Dự án học tập — không phải website chính thức.</div>
+    </footer>
+
+<script src="assets/js/backend-boot.js?v=1"></script>
+<script src="assets/js/cart-api.js?v=4"></script>
+<script src="assets/js/product.js?v=43"></script>
+</body></html>

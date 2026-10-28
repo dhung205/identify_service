@@ -22,7 +22,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 public class SecurityConfig {
 
-    private static final String[] PUBLIC_ENDPOINTS = {"/users", "/auth/token", "/auth/introspect", "/auth/logout", "/auth/refresh"};
+    private static final String[] PUBLIC_ENDPOINTS = {"/users", "/auth/token", "/auth/introspect", "/auth/logout", "/auth/refresh", "/auth/oauth2/exchange"};
 
     @Value("${jwt.signerKey}")
     private String signerKey;
@@ -30,10 +30,18 @@ public class SecurityConfig {
     @Autowired
     private CustomJwtDecoder customJwtDecoder;
 
+    @Autowired
+    private com.duyhung.identify_service.service.GoogleOAuth2UserService googleOAuth2UserService;
+
+    @Autowired
+    private GoogleOAuth2SuccessHandler googleOAuth2SuccessHandler;
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(request ->
                 request.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS).permitAll()
+                        .requestMatchers("/oauth2/**", "/login/oauth2/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/", "/index.html", "/account.html", "/cart.html", "/checkout.html", "/product.html", "/assets/**", "/staff/", "/staff/index.html", "/staff/login.html", "/staff/assets/**", "/favicon.ico").permitAll()
 
                         .anyRequest().authenticated());
 
@@ -45,6 +53,11 @@ public class SecurityConfig {
         );
 
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
+
+        httpSecurity.oauth2Login(oauth2 -> oauth2
+                .userInfoEndpoint(userInfo -> userInfo.userService(googleOAuth2UserService)
+                        .oidcUserService(googleOAuth2UserService::loadOidcUser))
+                .successHandler(googleOAuth2SuccessHandler));
 
         return httpSecurity.build();
     }

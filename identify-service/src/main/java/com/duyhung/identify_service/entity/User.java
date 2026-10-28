@@ -21,6 +21,9 @@ public class User {
     String id;
     String username;
     String password;
+    @Column(unique = true)
+    String googleId;
+    String email;
     String firstName;
     String lastName;
     LocalDate dob;
