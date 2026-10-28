@@ -41,7 +41,7 @@ public class SecurityConfig {
         httpSecurity.authorizeHttpRequests(request ->
                 request.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS).permitAll()
                         .requestMatchers("/oauth2/**", "/login/oauth2/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/", "/index.html", "/account.html", "/cart.html", "/checkout.html", "/product.html", "/assets/**", "/staff/", "/staff/index.html", "/staff/login.html", "/staff/assets/**", "/favicon.ico").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/", "/index.html", "/home.html", "/account.html", "/cart.html", "/checkout.html", "/product.html", "/assets/**", "/staff/", "/staff/index.html", "/staff/login.html", "/staff/assets/**", "/favicon.ico").permitAll()
 
                         .anyRequest().authenticated());
 

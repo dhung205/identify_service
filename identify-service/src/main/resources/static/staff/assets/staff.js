@@ -9,7 +9,7 @@ var medicines = [],
   currentSaleOrder = null;
 const money = (n) => new Intl.NumberFormat("vi-VN").format(n || 0) + "đ";
 const me = () => JSON.parse(sessionStorage.getItem("pharmacyUser") || "null");
-const isManager = () => me()?.role === "MANAGER";
+const isManager = () => me()?.role === "ADMIN" || me()?.role === "MANAGER";
 const toast = (t) => {
   const e = document.querySelector("#toast");
   e.textContent = t;
@@ -151,7 +151,7 @@ function applyRole() {
     location.replace("login.html");
     return;
   }
-  if (me().role === "CUSTOMER") {
+  if (me().role === "CUSTOMER" || me().role === "USER") {
     location.replace("../account.html");
     return;
   }

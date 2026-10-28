@@ -3,7 +3,7 @@ window.PharmacyCart = (() => {
   let user=null;
   try { user=JSON.parse(sessionStorage.getItem('pharmacyUser')); } catch {}
   // Mỗi tài khoản đăng nhập (khách hàng, nhân viên, quản lý) có giỏ hàng riêng trên máy chủ.
-  const remote=Boolean(user?.id) && window.LongChauBackend?.commerceAvailable !== false;
+  const remote=Boolean(user?.id);
   const key=remote?`pharmacyCart:customer:${user.id}`:'pharmacyCart:guest';
   const api=(window.LongChauBackend?.apiRoot || `http://${window.location.hostname || 'localhost'}:8080/api`) + '/cart';
   let state={version:0,items:[]},queue=Promise.resolve(),failure=null,lastRequested='';
@@ -73,4 +73,3 @@ window.PharmacyCart = (() => {
   const quantity=()=>remote?state.items.reduce((sum,item)=>sum+(Number(item.quantity)||0),0):0;
   return {ready,save,flush,refresh,checkoutDone,read:()=>clone(state.items),quantity,get version(){return state.version;}};
 })();
-

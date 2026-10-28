@@ -1,0 +1,37 @@
+/* Reference storefront layout, scoped to the customer home page. */
+.storefront-page { background: #f3f6fa; }
+.storefront-page .wrap { width: min(1220px, calc(100% - 40px)); }
+.storefront-page .topline { max-width: 1220px; margin: auto; height: 28px; }
+.storefront-page .header-main { min-height: 84px; }
+.storefront-page .keywords { padding-bottom: 13px; }
+.storefront-page .hero { margin-top: 24px; }
+.storefront-page .hero-inner { min-height: 343px; padding: 32px 44px; }
+.storefront-page .hero-copy { max-width: 58%; }
+.storefront-page .hero h1 { font-size: 48px; line-height: 1.14; margin: 14px 0 16px; }
+.storefront-page .hero p { max-width: 410px; margin-top: 0; margin-bottom: 22px; }
+.storefront-page .hero-art { width: 420px; max-width: 42%; right: 2%; }
+.storefront-page .benefits { margin-top: 16px; border-radius: 16px; }
+.storefront-page .benefits > div { padding: 17px 20px; }
+.storefront-page .categories { padding-top: 38px; }
+.storefront-page .account-menu { min-width: 0; }
+.storefront-page #accountLabel { max-width: 150px; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 900px) {
+  .storefront-page .header-main { gap: 16px; }
+  .storefront-page .hero-inner { min-height: 310px; padding: 30px; }
+  .storefront-page .hero h1 { font-size: 40px; }
+  .storefront-page .hero-art { right: 0; }
+}
+@media (max-width: 600px) {
+  .storefront-page .wrap, .storefront-page .hero { width: calc(100% - 24px); }
+  .storefront-page .header-main { gap: 12px; }
+  .storefront-page .topline { padding: 0 12px; }
+  .storefront-page .hero { margin-top: 16px; }
+  .storefront-page .hero-inner { width: 100%; min-height: 290px; padding: 26px 22px; }
+  .storefront-page .hero-copy { max-width: 100%; position: relative; z-index: 1; }
+  .storefront-page .hero h1 { font-size: 36px; }
+  .storefront-page .hero p { max-width: 260px; font-size: 14px; }
+  .storefront-page .hero-art { opacity: .22; max-width: 65%; right: -20px; }
+  .storefront-page .benefits > div { padding: 14px 10px; }
+  .storefront-page .categories { padding-top: 28px; }
+  .storefront-page #accountLabel { max-width: 100px; }
+}
